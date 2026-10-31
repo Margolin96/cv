@@ -1,0 +1,85 @@
+{
+  "name": "Aleksei Margolin",
+  "role": "Senior Software Engineer",
+
+  "stack": "TypeScript, JS (ES6, NodeJS), React (Classes, Hooks), Vue (2, 3, Composition API), Svelte, HTML5/CSS3, SASS/LESS, Wordpress (themes/plugins development), PHP, MySQL, PostgreSQL, Python, Git, REST, Figma",
+
+  "links": [
+    {"href": "mailto:aleksei@margol.in", "label": "aleksei@margol.in"},
+    {"href": "https://github.com/Margolin96", "label": "github.com/Margolin96"},
+    {"href": "https://leetcode.com/Margolin96", "label": "leetcode.com/Margolin96"}
+  ],
+  "linkedin": "https://linkedin.com/in/margolin96/",
+  "language": "English (working proficiency), Russian (native)",
+  "country": "Russian citizenship, located in Georgia, ready for relocate",
+
+  "experience": [
+    {
+      "from": "02/2025", "to": "now",
+      "role": "Lead Software Engineer", "company": "Charit SAS",
+      "list": [
+        {
+          "stack": "TypeScript / PostgreSQL / Graphile / Redis / PHP / Docker / PM2 / Svelte / HTML / CSS",
+          "desc": "*_#underline[FILL FROM GPT ANALIZE AND UPDATE STACK FROM CODEBASE]_*"
+        }
+      ]
+    },
+    {
+      "from": "02/2023", "to": "02/2026",
+      "role": "Lead Frontend Developer", "company": "Quantori LLC",
+      "list": [
+        {
+          "stack": "React / TypeScript / JS / RxJS / NodeJS / HTML / CSS",
+          "desc": "*_#underline[FILL MAYBE FROM INVOICES]_*"
+        },
+        {
+          "stack": "React / TypeScript / JS / HTML / CSS",
+          "desc": "Developed a powerful React component package for data visualisation. It handles large datasets *up~to 40,000~rows* and empowers users to create, save, and manage their work results. Automated features ensure optimal outcomes with ease."
+        }
+      ]
+    },
+    {
+      "from": "08/2021", "to": "02/2022",
+      "role": "Fullstack Developer", "company": "inSTEMM LTD",
+      "list": [
+        {
+          "stack": "PHP / MySQL / JS / HTML / CSS",
+          "desc": "Developed modules of an international network of sites for the interaction of scientific groups. Created own solutions for interaction between users of the system. Developed a cross-domain authorization service, a service for selling and recording user subscriptions, a social network of confirmed participants for scientific group interaction, a system of grant applications, an online scientific journal."
+        }
+      ]
+    },
+    {
+      "from": "01/2019", "to": "12/2021",
+      "role": "Frontend Developer", "company": "Deviz & Uniprint LTD",
+      "list": [
+        {
+          "stack": "Vue 2 / JS / HTML / CSS",
+          "desc": "Created a resource management application (design and frontend). Represents a table with manual input, computable values, and event notifications. Minimum response time is kept for outputting *up~to 100,000~cells* with automatic calculation of dependency chains between cells."
+        },
+        {
+          "stack": "Angular 1 / JS / HTML / CSS",
+          "desc": "Developed a Frontend of process control system for an international printing house. Implemented a statistics collection system, an interactive production schedule (Gantt chart) showing in real time the workload of the equipment with the possibility of load redistribution and a system of prediction and optimization of the order of operations. Average workload - *200-300~orders in~parallel per~day* from more than 15 separate processes in the life cycle of each operation."
+        }
+      ]
+    },
+    {
+      "from": "2013", "to": "2016",
+      "role": "Fullstack Developer",
+      "list": [
+        {
+          "stack": "Wordpress / PHP / MySQL / JS / HTML / CSS",
+          "desc": "Developed a theme and plugins for Online Media “ThePearl”. Cross-browser adaptive layout. The site remained functional with javascript oﬀ (gracefull-degradation). Average load was *15,000~hits per~day*."
+        },
+        {
+          "desc": "Developed the layout and integration with CMS Wordpress for “Freedom Team” of the local business festival website \"Iskra\". Average load during the events is *19,000 per day*. Developed the website of the \"Living Streets\" festival with interactive map. Average load is *11,000~views per~day*."
+        },
+        {
+          "desc": "Reworked the Street Art Museum's website. Integrated a new version of the site with CMS Wordpress. Average load - *4000~views per~day*."
+        },
+        {
+          "_desc": "Developed, managed and supported all the projects of Joiny Labs LTD. Adaptive and cross-browser (IE9+) website layout, integration with CMS Wordpress. Developed an app that integrates large city events and private meetings. Created modules for scheduling, advertising and ticket sales for events."
+        }
+      ]
+    }
+  ]
+}
