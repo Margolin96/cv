@@ -1,12 +1,36 @@
 name: Compile Typst Documents
-on: [push]
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-26.04
     steps:
-    - uses: actions/checkout@v4
-    - name: Compile Typst Files
-      uses: ammar-ahmed22/compile-typst-action@v2
-      with:
-        source_paths: 'cv/main.typ'
-        output_paths: 'cv.pdf'
+      - uses: actions/checkout@v5
+
+      - name: Compile Typst Files
+        uses: ammar-ahmed22/compile-typst-action@v2
+        with:
+          source_paths: 'cv/main.typ'
+          output_paths: 'cv.pdf'
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: cv
+          path: cv.pdf
+          if-no-files-found: error
+
+      - name: Update latest release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: latest
+          name: Latest CV
+          files: cv.pdf
+          make_latest: true
