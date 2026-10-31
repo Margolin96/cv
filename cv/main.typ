@@ -38,8 +38,9 @@
 #header(data)
 
 #block(
+  width: 100%,
   fill: rgb(0,0,0,20),
-  inset: 0.6em,
+  inset: 0.5em,
   radius: 0.25em,
 )[
   #text(
