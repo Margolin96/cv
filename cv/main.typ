@@ -6,8 +6,6 @@
  * Add previous parts (certificates, ase, ...)
  */
 
-#fonts()
-
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 #import "header.typ": header

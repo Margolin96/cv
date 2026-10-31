@@ -1,37 +1,45 @@
-name: Compile Typst Documents
+- name: Compile Typst Documents
+  on:
+    push:
+      branches:
+        - main
 
-on:
-  push:
-    branches:
-      - main
+  permissions:
+    contents: write
 
-permissions:
-  contents: write
+  jobs:
+    build:
+      runs-on: ubuntu-26.04
+      steps:
+        - uses: actions/checkout@v5
 
-jobs:
-  build:
-    runs-on: ubuntu-26.04
-    steps:
-      - uses: actions/checkout@v5
+        - name: Compile Typst Files
+          uses: ammar-ahmed22/compile-typst-action@v2
+          with:
+            source_paths: 'cv/main.typ'
+            output_paths: 'cv.pdf'
+            fonts_paths: 'fonts'
 
-      - name: Compile Typst Files
-        uses: ammar-ahmed22/compile-typst-action@v2
-        with:
-          source_paths: 'cv/main.typ'
-          output_paths: 'cv.pdf'
-          fonts_paths: 'fonts'
+        - name: Upload build artifact
+          uses: actions/upload-artifact@v7
+          with:
+            name: cv
+            path: cv.pdf
+            if-no-files-found: error
 
-      - name: Upload build artifact
-        uses: actions/upload-artifact@v7
-        with:
-          name: cv
-          path: cv.pdf
-          if-no-files-found: error
+        - name: Update latest release
+          uses: softprops/action-gh-release@v3
+          with:
+            tag_name: latest
+            name: Latest CV
+            files: cv.pdf
+            make_latest: true
 
-      - name: Update latest release
-        uses: softprops/action-gh-release@v3
-        with:
-          tag_name: latest
-          name: Latest CV
-          files: cv.pdf
-          make_latest: true
+
+- name: Install Typst
+  uses: typst-community/setup-typst@v4
+  with:
+    typst-version: latest
+
+- name: List fonts
+  run: typst fonts --font-path fonts
