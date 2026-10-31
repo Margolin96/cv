@@ -14,20 +14,12 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
-      - name: Install Typst
-        uses: typst-community/setup-typst@v4
-        with:
-          typst-version: latest
-
-      - name: List fonts
-        run: typst fonts --font-path fonts
-
       - name: Compile Typst Files
         uses: ammar-ahmed22/compile-typst-action@v2
         with:
           source_paths: 'cv/main.typ'
           output_paths: 'cv.pdf'
-          fonts_paths: 'fonts'
+          fonts_path: 'fonts'
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v7
