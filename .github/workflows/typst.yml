@@ -8,5 +8,5 @@ jobs:
     - name: Compile Typst Files
       uses: ammar-ahmed22/compile-typst-action@v2
       with:
-        source_paths: 'cv.typ'
+        source_paths: 'cv/main.typ'
         output_paths: 'cv.pdf'
